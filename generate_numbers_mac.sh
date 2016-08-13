@@ -9,8 +9,8 @@
 # Install `lame` from homebrew.
 
 for i in {1..99}; do
-  # Use vicki voice, at 120 WPM, inserting 200ms of trailing silence
-  say -v vicki -r 120 "${i} [[slnc 300]]" -o num.aiff
+  # Use vicki voice, at 140 WPM, inserting 200ms of trailing silence
+  say -v vicki -r 140 "${i} [[slnc 300]]" -o num.aiff
   # Convert from aiff to mp3 in mono mode, 16khz bitrate
   lame -m m -b 16 num.aiff data/$i.mp3 2>/dev/null
 done
