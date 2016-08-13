@@ -34,8 +34,13 @@ Connect to Icecast from a local client (e.g. VLC) at `http://localhost:8000/nigh
 
 #### Text-to-speech
 
-I used `espeak` to generate the `mp3` files of spoken numbers in the `./data` directory.
-To recreate the files, run `./generate_numbers.sh`. See comments in the script for more info.
+I tried two different ways to generate the `mp3` files of spoken numbers in the `./data` directory.
+
+`generate_numbers_docker.sh` uses `espeak` to generate audio and `sox` to encode to `mp3`, performed in a docker container.
+
+`generate_numbers_mac.sh` uses OSX's `say` to generate the audio and `lame` to encode to `mp3`, performed on the host. Requires `lame` package from homebrew.
+
+See comments in the scripts for more info.
 
 #### Playlist generation
 
@@ -66,3 +71,10 @@ Also had to remove ID3 tags from the chime file:
 brew install eyed3
 eyeD3 --remove-all chime.mp3
 ```
+
+#### TODO
+
+- Add high-cut and low-cut filters to make the audio sound like an AM radio station
+- Add [background static](http://linguistics.berkeley.edu/plab/guestwiki/index.php?title=Sox_in_phonetic_research#Add_noise_to_an_audio_file)
+- Add a very rare playlist item where the announcer breaks character to give an ominous warning or emotional breakdown, and is cut off abruptly, followed by extended silence
+- Find a better chime
