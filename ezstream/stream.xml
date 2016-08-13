@@ -1,0 +1,9 @@
+<ezstream>
+    <url>http://icecast:8000/nightvale.mp3</url>
+    <sourcepassword>nightvale</sourcepassword>
+    <format>MP3</format>
+    <filename>/next_playlist_item.sh</filename>
+    <playlist_program>1</playlist_program>
+    <svrinfoname>Night Vale Numbers Station</svrinfoname>
+    <svrinfopublic>0</svrinfopublic>
+</ezstream>

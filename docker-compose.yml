@@ -1,0 +1,13 @@
+icecast:
+  image: moul/icecast
+  environment:
+  - ICECAST_SOURCE_PASSWORD=nightvale
+  - ICECAST_ADMIN_PASSWORD=nightvale
+  ports:
+  - 8000:8000
+ezstream:
+  build: ezstream
+  volumes:
+    - ./data:/data
+  links:
+    - icecast
