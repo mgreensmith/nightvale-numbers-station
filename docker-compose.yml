@@ -1,5 +1,7 @@
 icecast:
   image: moul/icecast
+  volumes:
+  - logs:/var/log/icecast2
   environment:
   - ICECAST_SOURCE_PASSWORD=nightvale
   - ICECAST_ADMIN_PASSWORD=nightvale
@@ -11,3 +13,9 @@ ezstream:
     - ./data:/data
   links:
     - icecast
+webclient:
+  image: pierrezemb/gostatic
+  volumes:
+  - "./client:/srv/http"
+  ports:
+  - 8080:8043

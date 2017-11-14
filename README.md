@@ -1,7 +1,7 @@
 
 # Night Vale Numbers Station
 
-A streaming radio server playing a Night Vale-esque numbers station.
+A streaming radio server playing a [Night Vale-esque numbers station](http://nightvale.wikia.com/wiki/WZZZ).
 
 
 ## Serving Audio
@@ -23,7 +23,7 @@ The Icecast admin UI is available at `http://localhost:8000`. Admin credentials 
 
 #### Web Client
 
-Serve the `./client` directory with your web server of choice and navigate to the index page.
+A small webserver is deployed automatically with the audio server, and is serving from `http://localhost:8080`. It's serving the contents of the `./client` directory, which includes a simple HTML-based web client pointing at the local stream.
 
 #### Other Clients
 
@@ -52,9 +52,9 @@ I'm using the [Playlist Program](https://www.mankier.com/1/ezstream#Scripting-Pl
 
 Helpful tools:
 
-`afplay` to play an audio file from the command line.
+`afplay` to play an audio file from the command line. (OSX)
 
-`afinfo` to inspect an audio file and determinte bitrate, sample rate, channels, etc.
+`afinfo` to inspect an audio file and determinte bitrate, sample rate, channels, etc. (OSX)
 
 #### Chime sound
 
